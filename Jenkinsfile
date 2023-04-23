@@ -47,7 +47,7 @@ pipeline {
                 branch "master"
          }
          steps{
-            withAWS(credentials: 'brijesh', region: 'ap-northeast-1'){
+            withAWS(credentials: 'brijesh', region: 'ap-southeast-2'){
                 sh 'aws ecs update-service --cluster ${cluster} --service ${service} --force-new-deployment'
             }
          }
